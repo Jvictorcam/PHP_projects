@@ -1,12 +1,18 @@
 <?php
-$show = function(string $obj, string $separator = ' '){
-    echo "$obj" . $separator;
+$array = [
+    'name' => 'Jvictorcam',
+    'age' => '17',
+    'company' => 'ADS',
+    'height' => '1,65', 
+    'occupation' => 'Developer'
+];
+?>
 
-};
-$showArray = fn(array $obj) => array_map($show, $obj);
-
-
-$array = range(1, 100);
-$str = "testing function 1";
-$show($str);
-
+<table border="1">
+    <?php foreach($array as $key => $value): ?>
+    <tr>
+        <th> <?php echo $key;  ?> </th>
+        <td> <?php echo $value; ?> </td>
+    </tr>
+    <?php endforeach; ?>
+</table>
