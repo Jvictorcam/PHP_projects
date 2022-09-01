@@ -1,18 +1,11 @@
 <?php
-$array = [
-    'name' => 'Jvictorcam',
-    'age' => '17',
-    'company' => 'ADS',
-    'height' => '1,65', 
-    'occupation' => 'Developer'
-];
-?>
+$numbers = [1, 2, 3, 4, 5];
 
-<table border="1">
-    <?php foreach($array as $key => $value): ?>
-    <tr>
-        <th> <?php echo $key;  ?> </th>
-        <td> <?php echo $value; ?> </td>
-    </tr>
-    <?php endforeach; ?>
-</table>
+function sum($subtotal, $item){
+    $subtotal+=$item;
+    return $subtotal;
+}
+
+$total = array_reduce($numbers, 'sum');
+
+echo $total;
