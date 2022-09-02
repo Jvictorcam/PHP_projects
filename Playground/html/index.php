@@ -1,15 +1,8 @@
 <?php
-require_once 'calculator.php';
+require 'autoload.php';
+use \math\Calculator;
 
-$calc = new Calculalator();
+$calc = new Calculator();
 
-$calc->add(12);
-$calc->add(2);
-$calc->sub(1);
-$calc->multiply(3);
-$calc->divide(2);
-$calc->add(0.5);
-
-echo "TOTAL: ".$calc->total();
-$calc->clear();
-
+$calc->add(4);
+echo $calc->total();

@@ -1,5 +1,7 @@
 <?php
-class Calculalator{
+namespace math;
+
+class Calculator{
 
     private $num;
     public function __construct(){
