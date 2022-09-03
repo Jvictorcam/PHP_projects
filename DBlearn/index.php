@@ -18,7 +18,10 @@ $data = $sql->fetchAll(PDO::FETCH_ASSOC);
         <?php foreach($user as $subvalue): ?>
             <td><?=$subvalue?></td>
         <?php endforeach; ?> 
-        <td><a href="delete_action.php">Delete</a></td>    
+        <td>
+            <a href="delete_action.php?id=<?=$user['id'];?>">Delete</a>
+            <a href="edit.php?id=<?=$user['id'];?>">Edit</a>    
+        </td>    
     <tr>
     <?php endforeach; ?>
 
