@@ -24,7 +24,7 @@ $data = $userDAO->findAll();
             <td><center><?=$user->getEmail();?></center></td>
             <td><center>
                 <a href="edit.php?id=<?=$user->getId();?>" > [Edit] </a>
-                <a href="delete_action.php?id=<?=$user->getId();?>" > [Delete] </a> 
+                <a href="delete_action.php?id=<?=$user->getId();?>" onclick="return confirm('Are you sure you want to delete this?')" > [Delete] </a> 
             </center></td>
             
         </tr>
