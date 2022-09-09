@@ -35,9 +35,7 @@ class UserDAOMySql implements UserDAO{
             
         }
         
-        return $array;
-
-        
+        return $array;        
     }
     public function findById($id){
         $sql = $this->pdo->prepare("SELECT * FROM users WHERE id = :id");
